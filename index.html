@@ -284,7 +284,7 @@
                 </div>
                 <div class="subject__item">
                     <h5 class="subject__item-title">Английский клуб и билингвальные уроки: </h5>
-                    <table class="subject__table">
+                    <table cellspacing="0px" cellpadding="0px" class="subject__table">
                         <tr class="subject__tr">
                             <th class="subject__th">Предмет</th>
                             <th class="subject__th">Кол-во часов в неделю</th>
@@ -438,7 +438,44 @@
                         <tr class="time__tr">
                             <th class="time__th">
                                 <ul class="time__ul">
-                                    <li class="time__li">Английский язык</li>
+                                    <li class="time__li" style="list-style:none;  ">Английский язык</li>
+
+                                    </li>
+                                </ul>
+                            </th>
+                        </tr>
+
+                    </table>
+
+                </div>
+                <div class="time__item">
+                    <table class="time__table">
+                        <tr class="time__tr">
+                            <th class="time__th"
+                                style="background-color:#fff;border: 3px solid #F59F60;border-left: 0px solid #000;">
+                                Время</th>
+                        </tr>
+                        <tr class="time__tr">
+                            <th class="time__th"
+                                style="background-color:#fff;border: 3px solid #F59F60;border-left: 0px solid #000;">
+                                9:15
+                                -
+                                13:00</th>
+                        </tr>
+                        <tr class="time__tr">
+                            <th class="time__th"
+                                style="background-color:#fff;border: 3px solid #F59F60;border-left: 0px solid #000;">
+                                13:00
+                                -
+                                14:30</th>
+                        </tr>
+                        <tr class="time__tr">
+                            <th class="time__th"
+                                style="background-color:#fff;border: 3px solid #F59F60;border-left: 0px solid #000;">
+                                <ul class="time__ul">
+                                    <li class="time__li" style="list-style:none;">14:30
+                                        -
+                                        18:30</li>
 
                                     </li>
                                 </ul>
@@ -620,8 +657,12 @@
             <h5 class="feedback__subtitle">Информация о клиенте полностью конфиденциальна*</h5>
 
             <form class="feedback__form">
-                <input type="text" placeholder="Как Вас зовут?*" class="feedback__input">
-                <input type="text" placeholder="Ваш номер телефона*" class="feedback__input">
+                <input type="hidden" name="project_name" value="Biling">
+                <input type="hidden" name="admin_email" value="djegor2004@gmail.com">
+                <input type="hidden" name="form_subject" value="Заявка Билингвальная школа">
+
+                <input type="text" placeholder="Как Вас зовут?*" class="feedback__input _req">
+                <input type="text" placeholder="Ваш номер телефона*" class="feedback__input _req">
                 <button class="feedback__btn">Отправить форму</button>
             </form>
 
