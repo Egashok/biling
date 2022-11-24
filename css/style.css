@@ -1,11 +1,13 @@
 body{
     font-family: 'Oswald', sans-serif;
 }
+
 .container{
     max-width:1206px;
     margin: 0 auto;
     padding: 0;
 }
+
 .nav__items{
     display: flex;
 }
@@ -18,11 +20,14 @@ body{
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
-line-height: 17px;
+margin: auto;
 text-transform: uppercase;
 /* identical to box height */
+text-decoration: none;
+  
 
-display: flex;
+display:inline;
+
 align-items: center;
 letter-spacing: 0.1em;
 
@@ -36,13 +41,15 @@ color: #000000;
 
 .nav__item-text{
 
-    border-bottom: 2px solid transparent;
+
+    border-bottom: 2px solid transparent ;
     transition: all 1000ms;
 }
 .nav__item-text:hover{
-    border-bottom: 2px solid #F59F60;
-    transition: all 1000ms;
+    border-bottom: 2px solid #F59F60     ;
+        transition: all 1000ms;
     cursor: pointer;
+    
 }
 
 .nav__item{
@@ -230,6 +237,7 @@ text-align: center;
 font-size: 14px;
 padding: 12px 0px;
 line-height: 17px;
+transition: all 1000ms;
 text-transform: uppercase;
 text-decoration: none;
 color: #000000;
@@ -437,7 +445,7 @@ text-transform: none;
 color: #000000
 }
 .foot__tels{
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .foot__tel{
     font-family: 'Montserrat';
@@ -697,6 +705,12 @@ color: #000000;
     justify-content: space-between;
     background-color: #9ACAEC;
 }
+.quest__inner:nth-child(2n) .quest__item{
+    
+        background-color: #F59F60;
+    
+}
+
 .quest__btn{
     border: none;
     background-color: transparent;
@@ -704,9 +718,7 @@ color: #000000;
 .quest__item{
     margin-bottom: 10px;
 }
-.quest__item:nth-child(2n){
-    background-color: #F59F60;
-}
+
 .quest__item:last-child{
     margin-bottom: 0px;
 }
@@ -828,7 +840,7 @@ color: #000000;
 }
 
 .subject__table{
-    border-right:10px ;
+   
     
     margin: 0;
 }
@@ -953,11 +965,11 @@ font-size: 17px;
 line-height: 21px;
 
 color: #000000;
-border-spacing: 10px 5px;
+
 }
 .subject__table{
 
-    border-spacing: 10px;
+    
 }
 .time__items{
     display: flex   ;
@@ -995,10 +1007,10 @@ text-align: center;
 color: #000000
 }
 .subject__table{
- 
-        border-spacing: 10px;
-        padding: 0 2em 3em 0;  /* значения left и top последних ячеек */
 
+    padding: 0 2em 3em 0; 
+    border-spacing:10px ;
+    position: relative;
 }
 .subject__table td:nth-child(2) {
     position: relative;
@@ -1008,3 +1020,124 @@ color: #000000
     position: relative;
     top: 2em;
   }
+  .quest__hide{
+    display: none;
+  }
+  .quest__hide-active{
+    display: block;
+    transition: all 3500ms;
+    
+  }
+  .quest__img{
+    margin: 0 auto;
+  }
+  .quest__btn{
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  .quest__hide-text{
+
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+      
+  }
+  .quest__btn-active{
+    transform: rotate(180deg);
+   
+  }
+  .quest__btn-nact{
+    transform: rotate(0deg);
+  }
+
+  .main__call-content:hover{
+    background-color:#F59F60;
+    color: white;
+    transition: all 1000ms;
+  }
+  .about__link:hover{
+    background-color:#9ACAEC;
+    color: white;
+    transition: all 1000ms;
+  }
+
+  .main__call-content{
+    transition: all 1000ms;
+  }
+  .feedback__btn{
+    cursor: pointer;
+    transition: all 500ms;
+  }
+  .feedback__btn:hover{
+    color: white;
+    transition: all 1000ms;
+  }
+
+
+  .fixed__items{
+    
+z-index: 999;
+    display: flex;
+  padding-top:0px;
+    text-align: center;
+
+    bottom: 0;
+
+    align-self: center;
+  right: 0;
+    justify-content: end;
+    max-width: 1920px;
+   margin:  0 auto;
+  }
+  .fixed__item{
+ 
+        background-color: #F59F60;
+        border-radius: 50%;
+    width: 50px;
+    text-align: center;
+
+margin-right: 5px;
+cursor: pointer;
+
+    height: 50px;
+
+  }
+ 
+  .fixed{
+      display: flex;
+      display: inline-block;
+      justify-content: center;
+
+      text-align: center;
+        width: 100%;
+      padding-top: 200px;   
+      
+
+      position: absolute;
+  
+  
+   
+  }
+ 
+  .sticky {
+  
+    position: fixed;
+    top: -100px;
+    width: 100%;
+
+  
+ 
+  }
+
+  .fixed__img{
+   margin: auto auto;
+   margin-top: 15px;
+   vertical-align: bottom;
+  }
+ 
