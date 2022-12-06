@@ -16,6 +16,18 @@ $(function () {
         }
 
     });
+    $(".menu__btn").on('click', function (e) {
+        e.preventDefault();
+        if (!$("#menu").hasClass("nav__items--active")) {
+            $("#menu").addClass("nav__items--active");
+            $(".nav__item").addClass("nav__item--active");
+        }
+        else {
+            $("#menu").removeClass("nav__items--active");
+            $(".nav__item").removeClass("nav__item--active");
+        }
+
+    });
 });
 window.onscroll = function () { myFunction() };
 var navbar = document.getElementById("navbar");
@@ -51,9 +63,6 @@ $(document).ready(function () {
             $('#feedback').fadeOut();
         }
     });
-
-
-    /** При нажатии на кнопку мы перемещаемся к началу страницы */
     $('#top').click(function () {
         $('body,html').animate({
             scrollTop: 0
@@ -72,5 +81,5 @@ $(document).ready(function () {
         }, 500);
         return false;
     });
-
 });
+
