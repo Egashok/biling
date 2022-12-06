@@ -28,23 +28,48 @@ function myFunction() {
     }
 }
 
+
 $(document).ready(function () {
+    /**
+     * При прокрутке страницы, показываем или срываем кнопку
+     */
+    $(window).scroll(function () {
+        // Если отступ сверху больше 50px то показываем кнопку "Наверх"
+        if ($(this).scrollTop() > 50) {
+            $('#top').fadeIn();
+        } else {
+            $('#top').fadeOut();
+        }
+        if ($(this).scrollTop() > 50) {
+            $('#phone').fadeIn();
+        } else {
+            $('#phone').fadeOut();
+        }
+        if ($(this).scrollTop() > 50) {
+            $('#feedback').fadeIn();
+        } else {
+            $('#feedback').fadeOut();
+        }
+    });
 
-    //E-mail Ajax Send
-    $(".feedback__form").submit(function () {
 
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "mail.php",
-            data: th.serialize()
-        }).done(function () {
-            alert("Thank you!");
-            setTimeout(function () {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
+    /** При нажатии на кнопку мы перемещаемся к началу страницы */
+    $('#top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+    $('#feedback').click(function () {
+        $('body,html').animate({
+            scrollTop: 7520
+        }, 500);
+        return false;
+    });
+    $('#phone').click(function () {
+        $('body,html').animate({
+            scrollTop: 15000
+        }, 500);
         return false;
     });
 
